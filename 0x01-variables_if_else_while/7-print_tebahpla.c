@@ -1,5 +1,5 @@
 #include <stdio.h>
-set list listchars=tab:»\ ,trail:·,extends:»,precedes:«
+
 /**
  *  * main - program that prints the lowercase alphabet in reverse.
  *   * You can only use the putchar function
@@ -8,12 +8,12 @@ set list listchars=tab:»\ ,trail:·,extends:»,precedes:«
 
 int main(void)
 {
-int n = 122;
+     int n = 122;
      while (n > 96)
 	{
-	putchar(n);
+ 	putchar(n);
 	n -= 1;
 	}
-putchar('\n');
-return (0);
+    putchar('\n');
+    return (0);
 }
