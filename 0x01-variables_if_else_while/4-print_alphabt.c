@@ -1,4 +1,4 @@
-nclude <stdio.h>
+#include <stdio.h>
 
 /**
  * main - program that prints the alphabet in lowercase, followed by a new line
@@ -9,18 +9,18 @@ nclude <stdio.h>
 int main(void)
 {
 int lw = 'a';
-while (lw <= 'z')
+	while (lw <= 'z')
 	{
-	if (lw == 'e' || lw == 'q')
+		if (lw == 'e' || lw == 'q')
 		{
-	lw += 1;
+			lw += 1;
+		}
+		else
+		{
+			putchar(lw);
+			lw += 1;
+		}
 	}
-	else	
-	{
-	putchar(lw);
-	lw += 1;
-	}
-	}
-putchar('\n');
-return (0);
+	putchar('\n');
+	return (0);
 }
