@@ -9,18 +9,18 @@
 int main(void)
 {
 int lw = 'a';
-	while (lw <= 'z')
+while (lw <= 'z')
 	{
-		if (lw == 'e' || lw == 'q')
-		{
-			lw += 1;
-		}
-		else
-		{
-			putchar(lw);
-			lw += 1;
-		}
+if (lw == 'e' || lw == 'q')
+	{
+	lw += 1;
 	}
-	putchar('\n');
-	return (0);
+else
+	{
+putchar(lw);
+lw += 1;
+   }
+  }
+putchar('\n');
+return (0);
 }
