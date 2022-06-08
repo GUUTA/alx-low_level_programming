@@ -1,4 +1,4 @@
-#include "guta.h"
+#include "main.h"
 
 /**
  *  * main - program that prints Holberton.
