@@ -27,7 +27,7 @@ _putchar(mult + '0');
 else
 {
 _putchar(' ');
-_putchar((mult / 10)  '0');
+_putchar((mult / 10) + '0');
 _putchar((mult % 10) + '0');
 }
 if (col != 9)
