@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-*  * print_times_table - function that prints the n times table, starting with 0.
-*   * @n: input of table n
-*    * Return: nothing.
+* print_times_table - function that prints the n times table, starting with 0.
+* @n: input of table n
+* Return: nothing.
 */
 
 void print_times_table(int n)
