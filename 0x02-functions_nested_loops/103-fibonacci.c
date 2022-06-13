@@ -11,7 +11,7 @@ unsigned long fib1 = 0, fib2 = 1, fibsum;
 float tot_sum;
 while (1)
 {
-fibsum =fib1 + fib2;
+fibsum = fib1 + fib2;
 if (fibsum > 4000000)
 break;
 if ((fibsum % 2) == 0)
