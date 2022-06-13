@@ -1,40 +1,24 @@
 #include <stdio.h>
-#include <stdlib.h>
-int sum(int n);
-int fib(int n);
 
-const int N = 4000000;
-
-int main() {
-int i = 2;
-printf("%d, ",sum(i));
-return 0;
-}
-
-int sum(int n) {
-int sum = 0; // suma de los terminos pares
-while (fib(n) < N)
+/**
+*  * main - Prints the sum of even-valued Fibonacci sequence
+*   *        terms not exceeding 4000000.
+*     * Return: Always 0.
+*/
+int main(void)
 {
-if (fib(n)%2==0)
+unsigned long fib1 = 0, fib2 = 1, fibsum;
+float tot_sum;
+while (1)
 {
-sum += fib(n);
+fibsum =fib1 + fib2;
+if (fibsum > 4000000)
+break;
+if ((fibsum % 2) == 0)
+tot_sum += fibsum;
+fib1 = fib2;
+fib2 = fibsum;	
 }
-n++;
+printf("%.0f\n", tot_sum);
+return (0);
 }
-return sum;
-}
-
-int fib(int n) {
-int a = 0; // anterior
-int b = 1; // posterior
-int c = 0; // suma de a+b
-int i = 1; // contador
-while (i <= n) {
-c = a + b;
-a = b;
-b = c;
-i++;
-}
-return c;
-}
-
