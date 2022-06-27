@@ -6,8 +6,7 @@
 *  * simple_print_buffer - prints buffer in hexa
 *   * @buffer: the address of memory to print
 *    * @size: the size of the memory to print
-*     *
-*      * Return: Nothing.
+* Return: Nothing.
 */
 void simple_print_buffer(char *buffer, unsigned int size)
 {
@@ -25,7 +24,6 @@ i++;
 }
 printf("\n");
 }
-
 /**
 *  * main - check the code for ALX School students.
 *   *
@@ -35,7 +33,7 @@ int main(void)
 {
 char *buffer;
 buffer = create_array(98, 'H');
-if  (buffer == NULL)
+if(buffer == NULL)
 {
 printf("failed to allocate memory\n");
 return (1);

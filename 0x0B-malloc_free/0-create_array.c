@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
-*  *create_array - creates array
-*   *@size: size of array
-*    *@c: array element
-*     *Return: array or NULL
+* create_array - creates array
+* @size: size of array
+* @c: array element
+* Return: array or NULL
 */
 
 char *create_array(int size, char c)
