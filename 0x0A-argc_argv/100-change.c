@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-
+#include "main.h"
 /**
 *  * coin_count - counts the min coins needed for change
 *   *
