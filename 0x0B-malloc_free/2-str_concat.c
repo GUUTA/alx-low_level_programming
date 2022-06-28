@@ -1,45 +1,41 @@
 #include <stdlib.h>
-#include <stdio.h>
+
 /**
-*  *str_size - gets string size
-*   *@a: string
-*    *Return: string size
+*  * str_concat - function that concatenates two strings.
+*   * @s1: input char 1
+*    * @s2: input char 2
+*     * Return: char
 */
-int str_size(char *a)
-{
-int j = 0;
-while (a[j] != '\0')
-{
-j++;
-}
-return (j);
-}
-/**
-*  *str_concat - concatenates 2 strings
-*   *@s1: string 1
-*    *@s2: string 2
-*     *Return: pointer to combined string a
-*/
+
 char *str_concat(char *s1, char *s2)
 {
-int i, j = 0, total;
-char *a;
-total = str_size(s1) + str_size(s2);
-a = malloc(sizeof(char) * total);
-if (a == NULL)
-{
+char *cat;
+char *nul = "";
+unsigned int i, j, x, y;
+i = j = x = y = 0;
+if (s1 == NULL)
+s1 = nul;
+if (s2 == NULL)
+s2 = nul;
+while (s1[i] != '\0')
+i += 1;
+while (s2[j] != '\0')
+j += 1;
+j += 1;
+cat = malloc((i + j) * sizeof(*cat));
+if (cat == NULL)
 return (NULL);
-}
-for (i = 0; i < str_size(s1); i++)
+while (s1[x] != '\0')
 {
-a[i] = s1[i];
+cat[x] = s1[x];
+x += 1;
 }
-while (i <= total)
+while (s2[y] != '\0')
 {
-a[i] = s2[j];
-i++;
-j++;
+cat[x] = s2[y];
+y += 1;
+x += 1;
 }
-a[i] = '\0';
-return (a);
+cat[x] = '\0';
+return (cat);
 }
