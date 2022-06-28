@@ -22,7 +22,7 @@ i += 1;
 while (s2[j] != '\0')
 j += 1;
 j += 1;
-cat = malloc((i + j) * sizeof(*cat));
+cat = malloc((i + j)*sizeof(*cat));
 if (cat == NULL)
 return (NULL);
 while (s1[x] != '\0')
