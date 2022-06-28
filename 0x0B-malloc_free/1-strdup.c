@@ -17,7 +17,7 @@ return (NULL);
 while (str[i] != '\0')
 i += 1;
 i += 1;
-dup = malloc(i * sizeof(*dup));
+dup = malloc(i *sizeof(*dup));
 if (dup == NULL)
 return (NULL);
 while (j < i)
