@@ -1,98 +1,45 @@
-#include "main.h"
+#include <stdlib.h>
 #include <stddef.h>
 
 /**
-*  * len - returns length of str
-*   *@str: string to be counted
-*    *
-*     * Return: length of the string
+*  * argstostr - concatenates all the arguments of your program
+*   * @ac: argument count
+*    * @av: argument vector
+*     * Return: char
 */
 
-int len(char *str)
+char *argstostr(int ac, char **av)
 {
-int len = 0;
-if (str != NULL)
-{
-while (str[len])
-len++;
-}
-return (len);
-}
-
-/**
-*  * num_words - counts the number of words in str
-*   *@str: string to be used
-*    *
-*     *Return: number of words
-*/
-int num_words(char *str)
-{
-int i = 0, words = 0;
-while (i <= len(str))
-{
-if ((str[i] != ' ') && (str[i] != '\0'))
-{
-i++;
-}
-else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
-{
-words += 1;
-i++;
-}
-else
-{
-i++;
-}
-}
-return (words);
-}
-
-/**
-*  *strtow - splits a stirng into words
-*   *@str: string to be splitted
-*    *
-*     *Return: pointer to the array of splitted words
-*/
-
-char **strtow(char *str)
-{
-char **split;
-int i, j = 0, temp = 0, size = 0, words = num_words(str);
-if (words == 0)
+char *ar, *str;
+int i, j, cont;
+if (ac == 0 || av == NULL)
 return (NULL);
-split = (char **)malloc(sizeof(char *) * (words + 1));
-if (split != NULL)
+for (i = 0; i < ac; i++)
 {
-for (i = 0; i <= len(str) && words; i++)
+j = 0;
+while (av[i][j] != '\0')
 {
-if ((str[i] != ' ') && (str[i] != '\0'))
-size++;
-else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
-{
-split[j] = (char *)malloc(sizeof(char) * size + 1);
-if (split[j] != NULL)
-{
-while (temp < size)
-{
-split[j][temp] = str[(i - size) + temp];
-temp++;
-}
-split[j][temp] = '\0';
-size = temp = 0;
 j++;
+cont++;
 }
-else
+cont++;
+}
+cont += 1;
+ar = malloc(cont * sizeof(char));
+if (ar == NULL)
+return (NULL);
+str = ar;
+for (i = 0; i < ac; i++)
 {
-while (j-- >= 0)
-free(split[j]);
-free(split);
-return (NULL);
+j = 0;
+while (av[i][j] != '\0')
+{
+*ar = av[i][j];
+j++;
+ar++;
 }
+*ar = '\n';
+ar++;
 }
-}
-split[words] = NULL;
-return (split);
-}
-else
-return (NULL);
+return (str);
 }
