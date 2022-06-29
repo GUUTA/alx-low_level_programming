@@ -4,27 +4,28 @@
 
 /**
 *  * print_tab - Prints an array of string
-*   *
-*    * @tab: The array to print
+*   * @tab: The array to print
+*    *
+*     * Return: nothing
 */
 void print_tab(char **tab)
 {
 int i;
 for (i = 0; tab[i] != NULL; ++i)
 {
-printf("%s\n", tab[i]);									
+printf("%s\n", tab[i]);
 }
 }
 
 /**
-*  * main - check the code .
+*  * main - check the code for ALX School students.
 *   *
-*    * Return: Always 0.
+*    * Return: 1 if an error occurred, 0 otherwise
 */
 int main(void)
 {
 char **tab;
-tab = strtow("Talk is cheap. Show me the code.");
+tab = strtow("ALX School  #cisfun ");
 if (tab == NULL)
 {
 printf("Failed\n");
