@@ -2,11 +2,11 @@
 #include "dog.h"
 
 /**
- * _strdup - returns a pointer to a newly allocated space in memory
- * which contains a copy of the string given as a parameter.
- * @str: input char
- * Return: char
- */
+* _strdup - returns a pointer to a newly allocated space in memory
+* which contains a copy of the string given as a parameter.
+* @str: input char
+* Return: char
+*/
 
 char *_strdup(char *str)
 {
@@ -30,12 +30,12 @@ return (dup);
 }
 
 /**
- *new_dog - function that creates a new dog
- *@name: name of dog
- *@age: age of dog
- *@owner:owner of dog
- *Return: new struct
- */
+*new_dog - function that creates a new dog
+*@name: name of dog
+*@age: age of dog
+*@owner:owner of dog
+*Return: new struct
+*/
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
