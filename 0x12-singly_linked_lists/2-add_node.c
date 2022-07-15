@@ -28,7 +28,6 @@ return (new_node);
  * @s: character of string
  * Return: length of string
  */
-
 int _strlen(const char *s)
 {
 int i;
